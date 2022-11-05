@@ -7,6 +7,10 @@
         namevalidate();
         placa();
         rota();
+        trasport();
+        inicio();
+        termino();
+        
     })
 
     function setError(index){
@@ -15,9 +19,10 @@
     }
 
     function removeError(index){
-        campos[index].style.border ='';
+        campos[index].style.border ='2px solid #008000';
         spans[index].style.display = 'none';
     }
+
 
 
     function namevalidate(){
@@ -51,6 +56,42 @@
         else
         {
             removeError(3);
+            
+        }
+    }
+
+    function trasport(){
+        if(campos[4].value.length < 3)
+        {
+            setError(4);
+        }
+        else
+        {
+            removeError(4);
+            
+        }
+    }
+
+    function inicio(){
+        if(campos[5].value.length < 12)
+        {
+            setError(5);
+        }
+        else
+        {
+            removeError(5);
+            
+        }
+    }
+
+    function termino(){
+        if(campos[6].value.length < 12)
+        {
+            setError(6);
+        }
+        else
+        {
+            removeError(6);
             
         }
     }
