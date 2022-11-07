@@ -8,8 +8,10 @@
         placa();
         rota();
         trasport();
+        id_pacote();
         inicio();
         termino();
+        
         
     })
 
@@ -35,6 +37,7 @@
             removeError(0);
         }
     }
+
 
     function placa(){
         if(campos[2].value.length < 7)
@@ -72,8 +75,8 @@
         }
     }
 
-    function inicio(){
-        if(campos[5].value.length < 12)
+    function id_pacote(){
+        if(campos[5].value.length < 11)
         {
             setError(5);
         }
@@ -84,7 +87,7 @@
         }
     }
 
-    function termino(){
+    function inicio(){
         if(campos[6].value.length < 12)
         {
             setError(6);
@@ -96,7 +99,18 @@
         }
     }
 
-    $("#cpf").mask("999.999.999-99");
-    
+    function termino(){
+        if(campos[7].value.length < 12)
+        {
+            setError(7);
+        }
+        else
+        {
+            removeError(7);
+            
+        }
+    }
+$("#cpf").mask("999.999.999-99");
+
 
 

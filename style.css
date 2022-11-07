@@ -1,102 +1,114 @@
-:root{
-    --color-white:#fff;
-    --color-red:#e63636;
-    --color-dardk1:#181818;
-    --color-dardk2:#1e1e1e;
-    --color-purple1: #9333FF;;
-    --color-purple2:indigo;
-
+:root {
+  --color-white: #fff;
+  --color-red: #e63636;
+  --color-dardk1: #181818;
+  --color-dardk2: #1e1e1e;
+  --color-purple1: #9333ff;
+  --color-purple2: indigo;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-dardk1);
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family: "Outfit";
+  background-color: var(--color-dardk1);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content{
-    background-color: var(--color-dardk2);
-    padding: 2rem;
-    border-radius: .9rem;
-    min-width: 20%;
-    overflow: auto;
+.content {
+  background-color: var(--color-dardk2);
+  padding: 2rem;
+  border-radius: 0.9rem;
+  min-width: 10%;
+  overflow: auto;
 }
-h1{
-    margin-bottom: 1rem;
-    text-align: center;
+h1 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
-.logo{
-    padding: 1rem;
+.logo {
+  padding: 1rem;
 }
-.content form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.requerimento{
-    display: none;
-    font-size: .9rem;
-    margin: 3px 0 0 1px;
-    color: var(--color-red);
+.requerimento {
+  display: none;
+  font-size: 0.9rem;
+  margin: 3px 0 0 1px;
+  color: var(--color-red);
 }
-.inputs{
-    padding: 8px 5px;
-    outline: none;
-    border-radius: 5px;
-    background-color: var(--color-dardk1);
-    border: 2px solid var(--color-dardk1);
-    color: var(--color-white);
-    width: 100%;
-    box-sizing: border-box;
-    transition: .3s;
+.inputs {
+  padding: 8px 5px;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--color-dardk1);
+  border: 2px solid var(--color-dardk1);
+  color: var(--color-white);
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
 }
-.inputs:focus{
-    border-color: var(--color-purple1);
+.inputs:focus {
+  border-color: var(--color-purple1);
 }
-.box-select{
-    display: flex;
+.box-select {
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem;
+  gap: 0.5rem;
+  /*display: flex;
     justify-content: space-between;
     font-weight: bold;
-    gap: 1rem;
+    gap: .5rem;
+    flex-direction: column;
+    */
 }
-textarea{
-    resize: none;
+.box-selects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-button[type="submit"]{
-    padding: 1rem;
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    background-color: var(--color-purple2);
-    color: var(--color-white);
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
-}
-button[type="submit"]:hover{
-    background-color: var(--color-purple1);
+p {
+  font-weight: bolder;
 }
 
-@media screen and (max-width:576px){
-    .box-select{
-        flex-direction: column;
-        gap: 5px;
-    }
-    .content{
-        background-color: var(--color-dardk2);
-        padding: 2rem;
-        border-radius: 10px;
-        min-width: 10%;
-        overflow: auto;
-        height: 90%;
-        
-    }
+textarea {
+  resize: none;
+}
+button[type="submit"] {
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  background-color: var(--color-purple2);
+  color: var(--color-white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button[type="submit"]:hover {
+  background-color: var(--color-purple1);
 }
 
+@media screen and (max-width: 576px) {
+  .box-select {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .content {
+    background-color: var(--color-dardk2);
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 10%;
+    overflow: auto;
+  }
+};

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <title>Meli-Solução</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -19,7 +22,7 @@
                 <span class="requerimento">Nome deve ter no mínimo 4 caracteres !</span>
             </div>
             <div>
-                <input type="text" placeholder="CPF" id="cpf" class="inputs required">
+                <input type="text" placeholder="CPF" id="cpf" class="inputs required" oninput="cpf()">
                 <span class="requerimento">Digite um CPF valido</span>
             </div>
             <div>
@@ -27,12 +30,16 @@
                 <span class="requerimento">Placa do veículo !</span>
             </div>
             <div>
-                <input type="text"  placeholder="Rota" class="inputs required" oninput="rota()">
+                <input type="text"  placeholder="Rota" class="inputs required" maxlength="6" oninput="rota()">
                 <span class="requerimento">Ex: A_3 / MOT_22</span>
             </div>
             <div>
                 <input type="text"  placeholder="Transportadora" class="inputs required" oninput="trasport()">
                 <span class="requerimento">Ex: AC2 / BRJ</span>
+            </div>
+            <div>
+                <input type="text"  placeholder="ID do pacote" class="inputs required" maxlength="11" oninput="id_pacote()">
+                <span class="requerimento">Ex: 41171342902</span>
             </div>
             <div>
                 <input type="text"  placeholder="Inico" class="inputs required" maxlength="12" oninput="inicio()">
@@ -43,29 +50,41 @@
                 <span class="requerimento">Ex: 09:00h 27/12</span>
             </div>
             <textarea class="inputs" name="descrição" id="descrição" cols="30" rows="10" placeholder="Relate a situação..."></textarea>
-            <p>Situação:</p>
+            <p>Status:</p>
             <div class="box-select">
-                <div>
-                    <input type="radio"  id="d" value="d" name="situação">
+                <div class="grid-filho">
+                    <input type="checkbox"  id="d" value="d" name="situação">
                     <label for="d">Avaria</label>
                 </div>
-                <div>
-                    <input type="radio"  id="a" value="a" name="situação">
+                <div class="grid-filho">
+                    <input type="checkbox"  id="a" value="a" name="situação">
                     <label for="a">Aduana</label>
                 </div>
-                <div>
-                    <input type="radio"  id="p" value="p" name="situação">
-                    <label for="p">Pacote Perdido</label>
+                <div class="grid-filho">
+                    <input type="checkbox"  id="p" value="p" name="situação">
+                    <label for="p">Perdido</label>
+                </div>
+                <div class="grid-filho">
+                    <input type="checkbox"  id="de" value="de" name="situação">
+                    <label for="de">Devolução</label>
+                </div>
+                <div class="grid-filho">
+                    <input type="checkbox"  id="in" value="in" name="situação">
+                    <label for="in">Insucesso</label>
+                </div>
+                <div class="grid-filho">
+                    <input type="checkbox"  id="re" value="re" name="situação">
+                    <label for="re">Recusa</label>
                 </div>
             </div>
-            <p>Qual sua ocupação ?</p>
-            <div class="box-select">
+            <p>Profissão:</p>
+            <div class="box-selects">
                 <div>
-                    <input type="checkbox"  id="dis" value="dis" name="ocupacao">
+                    <input type="radio"  id="dis" value="dis" name="ocupacao">
                     <label for="dis">Dispachante</label>
                 </div>
                 <div>
-                    <input type="checkbox"  id="mot" value="mot" name="ocupacao">
+                    <input type="radio"  id="mot" value="mot" name="ocupacao">
                     <label for="mot">Motorista</label>
                 </div>
             </div>
