@@ -11,8 +11,6 @@
         id_pacote();
         inicio();
         termino();
-        
-        
     })
 
     function setError(index){
