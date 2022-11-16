@@ -10,7 +10,6 @@
         trasport();
         id_pacote();
         inicio();
-        termino();
     })
 
     function setError(index){
@@ -93,18 +92,6 @@
         else
         {
             removeError(6);
-            
-        }
-    }
-
-    function termino(){
-        if(campos[7].value.length < 12)
-        {
-            setError(7);
-        }
-        else
-        {
-            removeError(7);
             
         }
     }
