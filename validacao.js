@@ -10,6 +10,7 @@
         trasport();
         id_pacote();
         inicio();
+        
     })
 
     function setError(index){
