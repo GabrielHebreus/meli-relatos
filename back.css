@@ -1,0 +1,75 @@
+:root {
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dardk1: #181818;
+    --color-dardk2: #1e1e1e;
+    --color-purple1: #9333ff;
+    --color-purple2: indigo;
+  }
+
+  body {
+    margin-top: 20rem;
+    font-family: "Outfit";
+    background-color: var(--color-dardk1);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  @media screen and (max-width: 576px) {
+    .box-select {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .content {
+      background-color: var(--color-dardk2);
+      padding: 2rem;
+      border-radius: 10px;
+      min-width: 10%;
+      overflow: auto;
+    }
+  };
+  
+  /*Página de obrigado*/
+  
+  section.main{
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .text{
+    font-size: 2rem;
+    color:#f5f5f5;
+    margin-bottom: 20px;
+  }
+  
+  .paragrafo{
+    font-size: 1rem;
+    text-align: center;
+    color:#f5f5f5;
+    margin-bottom: 20px;
+  }
+  
+  .btn{
+  
+    padding: 0.8rem 1rem;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: #181818;
+    transition: all 0.5s;
+    justify-content: center;
+    border-radius: 16px;
+    display: flex;
+  }
+  
+  .btn:hover{
+    background-color: var(--color-purple1);
+  }
