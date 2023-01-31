@@ -21,36 +21,36 @@
         <form id="form">
             <div>
                 <input type="text" name="nome" placeholder="Nome completo" class="inputs required"
-                    oninput="namevalidate()">
+                    oninput="namevalidate()" onchange="toggleButton()">
                 <span class="requerimento">Nome deve ter no mínimo 4 caracteres !</span>
             </div>
             <div>
-                <input type="text" name="cpf" placeholder="CPF" id="cpf" class="inputs required" oninput="cpf()">
+                <input type="text" name="cpf" placeholder="CPF" id="cpf" class="inputs required" oninput="cpf()" onchange="toggleButton()">
                 <span class="requerimento">Digite um CPF valido</span>
             </div>
             <div>
                 <input type="text" name="placoDoVeiculo" placeholder="Placa" class="inputs required" maxlength="7"
-                    oninput="placa()">
+                    oninput="placa()" onchange="toggleButton()">
                 <span class="requerimento">Placa do veículo !</span>
             </div>
             <div>
                 <input type="text" name="rotas" placeholder="Rota" class="inputs required" maxlength="6"
-                    oninput="rota()">
+                    oninput="rota()" onchange="toggleButton()" >
                 <span class="requerimento">Ex: A_3 / MOT_22</span>
             </div>
             <div>
                 <input type="text" name="trasportadora" placeholder="Transportadora" class="inputs required"
-                    oninput="trasport()">
+                    oninput="trasport()" onchange="toggleButton()">
                 <span class="requerimento">Ex: AC2 / BRJ</span>
             </div>
             <div>
                 <input type="number" name="idPacote" placeholder="ID do pacote" class="inputs required" maxlength="11"
-                    oninput="id_pacote()">
+                    oninput="id_pacote()" onchange="toggleButton()">
                 <span class="requerimento">Ex: 41171342902</span>
             </div>
             <div>
                 <input type="datetime-local" name="datetime-local" placeholder="Inico" class="inputs required"
-                    maxlength="12" oninput="inicio()">
+                    maxlength="12" oninput="inicio()" onchange="toggleButton()">
                 <span class="requerimento">Ex: 22/11/2022 09:03</span>
             </div>
             <textarea class="inputs" name="descrição" id="descrição" cols="30" rows="10"
@@ -93,10 +93,10 @@
                     <label for="motorista">Motorista</label>
                 </div>
             </div>
-            <button onclick="redi()" type="submit">Enviar</button>
+            <button id="enviar" disabled onclick="redi()" type="submit">Enviar</button>
         </form>
     </div>
-</body>
+    </body>
 <script src="./js/validacao.js"></script>
 <script type="text/javascript" src="./js/redi.js"></script>
 

@@ -2,6 +2,24 @@
     const campos =document.querySelectorAll('.required');
     const spans = document.querySelectorAll('.requerimento');
 
+    function toggleButton(){
+        const nome = document.getElementsByTagName('input')[0].value;
+        const cpf = document.getElementsByTagName('input')[1].value;
+        const placoDoVeiculo = document.getElementsByTagName('input')[2].value;
+        const rotas = document.getElementsByTagName('input')[3].value;
+        const trasportadora = document.getElementsByTagName('input')[4].value;
+        const idPacote = document.getElementsByTagName('input')[5].value;
+        const datetime = document.getElementsByTagName('input')[6].value;
+
+
+        if (nome && cpf && placoDoVeiculo && rotas && trasportadora && idPacote && datetime) {
+            document.querySelector('#enviar').disabled = false;
+            return
+    
+        }
+        document.querySelector('#enviar').disabled = true;
+    }
+
     form.addEventListener('submit',(Event) => {
         Event.preventDefault();
         namevalidate();
@@ -10,6 +28,7 @@
         trasport();
         id_pacote();
         inicio();
+        
     })
 
     function setError(index){
@@ -21,8 +40,6 @@
         campos[index].style.border ='2px solid #008000';
         spans[index].style.display = 'none';
     }
-
-
 
     function namevalidate(){
         if(campos[0].value.length < 4)
@@ -95,6 +112,7 @@
             
         }
     }
+    
 $("#cpf").mask("999.999.999-99");
 
 
